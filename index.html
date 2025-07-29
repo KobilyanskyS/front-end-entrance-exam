@@ -2,12 +2,471 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Graham Hunt CV</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="./js/main.js"></script>
+    <div class="container">
+      <header class="header">
+        <button
+          class="ripple-btn"
+          id="download-cv-btn"
+          onclick="createRipple(event)"
+        >
+          Download CV
+        </button>
+      </header>
+      <div class="grid-container">
+        <section class="photo" aria-label="Photo"></section>
+        <section class="intro">
+          <p
+            class="intro__greeting editable"
+            contenteditable="true"
+            data-id="intro-greeting"
+          >
+            Hello 👋🏼 I’m
+          </p>
+          <h2
+            class="intro__name editable"
+            contenteditable="true"
+            data-id="intro-name"
+          >
+            Graham Hunt
+          </h2>
+          <p
+            class="intro__specialization editable"
+            contenteditable="true"
+            data-id="intro-specialization"
+          >
+            Brand/Logo Designer
+          </p>
+        </section>
+        <section class="languages">
+          <h3 class="languages__title">Languages</h3>
+          <div class="languages__list">
+            <div class="languages__item">
+              <span
+                class="languages__name editable"
+                contenteditable="true"
+                data-id="lang-english"
+                >English</span
+              >
+              <div class="languages__bar languages__bar--full"></div>
+            </div>
+            <div class="languages__item">
+              <span
+                class="languages__name editable"
+                contenteditable="true"
+                data-id="lang-spanish"
+                >Spanish</span
+              >
+              <div class="languages__bar languages__bar--medium"></div>
+            </div>
+            <div class="languages__item">
+              <span
+                class="languages__name editable"
+                contenteditable="true"
+                data-id="lang-french"
+                >French</span
+              >
+              <div class="languages__bar languages__bar--low"></div>
+            </div>
+          </div>
+        </section>
+        <section class="education">
+          <h3 class="education__title">Education</h3>
+          <div class="education__items">
+            <div class="education__item education__item--active">
+              <div class="education__item-header">
+                <p
+                  class="education__item-year editable"
+                  contenteditable="true"
+                  data-id="edu-year-2024"
+                >
+                  2024
+                </p>
+                <svg width="11" height="11">
+                  <path
+                    d="M2.75 0.807373C1.99375 0.807373 1.32 1.12388 0.81125 1.61929C0.31625 2.1147 0 2.78901 0 3.55965C0 4.31653 0.31625 4.99083 0.81125 5.5L5.5 10.1926L10.1887 5.5C10.6838 5.0046 11 4.33029 11 3.55965C11 2.80277 10.6838 2.12847 10.1887 1.61929C9.69375 1.12388 9.02 0.807373 8.25 0.807373C7.49375 0.807373 6.82 1.12388 6.31125 1.61929C5.81625 2.1147 5.5 2.78901 5.5 3.55965C5.5 2.80277 5.18375 2.12847 4.68875 1.61929C4.19375 1.12388 3.52 0.807373 2.75 0.807373Z"
+                    fill="#F6ED1E"
+                  />
+                </svg>
+              </div>
+              <p
+                class="education__item-speciality editable"
+                contenteditable="true"
+                data-id="edu-spec-uxui"
+              >
+                UX/UI
+              </p>
+              <p class="education__item-tags education__item-tags--active">
+                <span class="education__item-tag">#UX</span>
+                <span class="education__item-tag">#UX</span>
+                <span class="education__item-tag">#UI</span>
+                <span class="education__item-tag">#research</span>
+                <span class="education__item-tag">#DesignSystem</span>
+                <span class="education__item-tag">#Agile</span>
+                <span class="education__item-tag">#wireframing</span>
+                <span class="education__item-tag">#figma</span>
+                <span class="education__item-tag">#IA</span>
+              </p>
+              <p
+                class="education__item-source editable"
+                contenteditable="true"
+                data-id="edu-source-neoland"
+              >
+                Neoland
+              </p>
+            </div>
+            <div class="education__item">
+              <p
+                class="education__item-year editable"
+                contenteditable="true"
+                data-id="edu-year-2022"
+              >
+                2022
+              </p>
+              <p
+                class="education__item-speciality editable"
+                contenteditable="true"
+                data-id="edu-spec-product"
+              >
+                Product designer
+              </p>
+              <p class="education__item-tags">
+                <span class="education__item-tag">#analytics</span>
+                <span class="education__item-tag">#research</span>
+                <span class="education__item-tag">#prototype</span>
+                <span class="education__item-tag">#wireframes</span>
+              </p>
+              <p
+                class="education__item-source editable"
+                contenteditable="true"
+                data-id="edu-source-coursera"
+              >
+                Coursera
+              </p>
+            </div>
+            <div class="education__item">
+              <p
+                class="education__item-year editable"
+                contenteditable="true"
+                data-id="edu-year-2017-2021"
+              >
+                2017-2021
+              </p>
+              <p
+                class="education__item-speciality editable"
+                contenteditable="true"
+                data-id="edu-spec-graphic"
+              >
+                Graphic design
+              </p>
+              <p class="education__item-tags">
+                <span class="education__item-tag">#branding</span>
+                <span class="education__item-tag">#web</span>
+                <span class="education__item-tag">#illustration</span>
+                <span class="education__item-tag">#adobe</span>
+              </p>
+              <p
+                class="education__item-source editable"
+                contenteditable="true"
+                data-id="edu-source-cali"
+              >
+                Cali Institute of the Arts
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="interests">
+          <h3 class="interests__title">Interests</h3>
+          <div class="interests__tags">
+            <span class="interests__tag">branding</span>
+            <span class="interests__tag">brand identity</span>
+            <span class="interests__tag">logo</span>
+            <span class="interests__tag">typography</span>
+            <span class="interests__tag">photography</span>
+            <span class="interests__tag">designing</span>
+            <span class="interests__tag">poster design</span>
+            <span class="interests__tag">research</span>
+            <span class="interests__tag">social networks</span>
+            <span class="interests__tag">illustration</span>
+          </div>
+        </section>
+        <section class="contact">
+          <h3
+            class="contact__title editable"
+            contenteditable="true"
+            data-id="contact-title"
+          >
+            Let’s chat! I’m ready to work on exciting projects
+          </h3>
+          <p
+            class="contact__info editable"
+            contenteditable="true"
+            data-id="contact-info"
+          >
+            <span
+              class="contact__info-email editable"
+              contenteditable="true"
+              data-id="contact-email"
+              >ivann19bj@gmail.com</span
+            >
+            <span
+              class="contact__info-sep editable"
+              contenteditable="true"
+              data-id="contact-sep"
+              >|</span
+            >
+            <span
+              class="contact__info-phone editable"
+              contenteditable="true"
+              data-id="contact-phone"
+              >+34 666 666 666</span
+            >
+          </p>
+        </section>
+        <section class="tools">
+          <h3 class="tools__title">Tools</h3>
+          <div class="tools__groups">
+            <div class="tools__group">
+              <div class="tools__group-title-container">
+                <h4 class="tools__group-title">design</h4>
+              </div>
+              <div class="tools__group-elements">
+                <div class="tools__group-element">
+                  <img src="/img/logoFigma.png" alt="fig" id="icon-figma" />
+                </div>
+                <div class="tools__group-element">
+                  <img
+                    src="/img/logoCreativeCloud.png"
+                    alt="adobe"
+                    id="icon-adobe"
+                  />
+                </div>
+                <div class="tools__group-element">
+                  <img src="/img/logoMiro.png" alt="miro" id="icon-miro" />
+                </div>
+                <div class="tools__group-element">
+                  <img
+                    src="/img/logoNotion.png"
+                    alt="notion"
+                    id="icon-notion"
+                  />
+                </div>
+                <div class="tools__group-element">
+                  <img src="/img/logoMeet.png" alt="meet" id="icon-meet" />
+                </div>
+                <div class="tools__group-element">
+                  <img
+                    src="/img/logoanalytics.png"
+                    alt="analytics"
+                    id="icon-analytics"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="tools__group">
+              <div class="tools__group-title-container">
+                <h4 class="tools__group-title">no-code</h4>
+              </div>
+              <div class="tools__group-elements">
+                <div class="tools__group-element">
+                  <img
+                    src="/img/logoZapìer.png"
+                    alt="zapier"
+                    id="icon-zapier"
+                  />
+                </div>
+                <div class="tools__group-element">
+                  <img
+                    src="/img/logoWebflow.png"
+                    alt="webflow"
+                    id="icon-webflow"
+                  />
+                </div>
+                <div class="tools__group-element">
+                  <img
+                    src="/img/logoFramer.png"
+                    alt="framer"
+                    id="icon-framer"
+                  />
+                </div>
+                <div class="tools__group-element">
+                  <img
+                    src="/img/logoWordpress.png"
+                    alt="wordpress"
+                    id="icon-wordpress"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="tools__group">
+              <div class="tools__group-title-container">
+                <h4 class="tools__group-title">artifical intelligence</h4>
+              </div>
+              <div class="tools__group-elements">
+                <div class="tools__group-element">
+                  <img
+                    src="/img/logoChatGPT.png"
+                    alt="chatgpt"
+                    id="icon-chatgpt"
+                  />
+                </div>
+                <div class="tools__group-element">
+                  <img
+                    src="/img/logoCopilot.png"
+                    alt="copilot"
+                    id="icon-copilot"
+                  />
+                </div>
+                <div class="tools__group-element">
+                  <img
+                    src="/img/logoMidjourney.png"
+                    alt="midjourney"
+                    id="icon-midjourney"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="experience">
+          <h3 class="experience__title">Experience</h3>
+          <div class="experience__items">
+            <div class="experience__item experience__item--active">
+              <p
+                class="experience__year editable"
+                contenteditable="true"
+                data-id="exp-year-2023"
+              >
+                Jul. 2023 - Aug. 2023
+              </p>
+              <div class="experience__recent">
+                <p>most recent</p>
+              </div>
+              <div class="experience__speciality">
+                <h3
+                  class="experience__speciality-name editable"
+                  contenteditable="true"
+                  data-id="exp-spec-senior"
+                >
+                  Senior Graphic Designer
+                </h3>
+                <p
+                  class="experience__speciality-time editable"
+                  contenteditable="true"
+                  data-id="exp-time-senior"
+                >
+                  <span>Pinnacle</span><span> | </span><span>Full-time</span>
+                </p>
+              </div>
+              <ul
+                class="experience__list editable"
+                contenteditable="true"
+                data-id="exp-list-senior"
+              >
+                <li>
+                  Research and brainstorm various design ideas for content and
+                  marketing.
+                </li>
+                <li>
+                  Review the work submitted by Junior Designers and sharing
+                  feedback.
+                </li>
+              </ul>
+            </div>
+            <div class="experience__item">
+              <p
+                class="experience__year editable"
+                contenteditable="true"
+                data-id="exp-year-2021"
+              >
+                Ene. 2021 - Jul. 2023
+              </p>
+              <p class="experience__recent"></p>
+              <div class="experience__speciality">
+                <h3
+                  class="experience__speciality-name editable"
+                  contenteditable="true"
+                  data-id="exp-spec-web"
+                >
+                  Graphic / Web designer
+                </h3>
+                <p
+                  class="experience__speciality-time editable"
+                  contenteditable="true"
+                  data-id="exp-time-web"
+                >
+                  <span>Double Square</span><span> | </span
+                  ><span>Full-time</span>
+                </p>
+              </div>
+              <ul
+                class="experience__list editable"
+                contenteditable="true"
+                data-id="exp-list-web"
+              >
+                <li>
+                  Development of internal projects from scratch, product design
+                  of brands.
+                </li>
+                <li>Landing page, webapps and hybrid apps</li>
+                <li>
+                  Taking decisions with stakeholders for the future of products
+                  such as Beagle labs, myur...
+                </li>
+              </ul>
+            </div>
+            <div class="experience__item">
+              <p
+                class="experience__year editable"
+                contenteditable="true"
+                data-id="exp-year-freelance"
+              >
+                Feb. 2021 - Jul. 2023
+              </p>
+              <p class="experience__recent"></p>
+              <div class="experience__speciality">
+                <h3
+                  class="experience__speciality-name editable"
+                  contenteditable="true"
+                  data-id="exp-spec-freelance"
+                >
+                  Graphic Designer
+                </h3>
+                <p
+                  class="experience__speciality-time editable"
+                  contenteditable="true"
+                  data-id="exp-time-freelance"
+                >
+                  <span>Freelance</span>
+                </p>
+              </div>
+              <ul
+                class="experience__list editable"
+                contenteditable="true"
+                data-id="exp-list-freelance"
+              >
+                <li>Visual design for Events, Brands and Products.</li>
+                <li>Product design, Packaging Design</li>
+                <li>Logo Design</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="/js/editable-animate.js"></script>
+    <script src="/js/ripple.js"></script>
+    <script src="/js/editable-storage.js"></script>
+    <script src="/js/downloadCV.js"></script>
   </body>
 </html>

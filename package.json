@@ -6,9 +6,19 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format": "prettier --write .",
+    "lint": "eslint . --ext .js --fix",
+    "jshint": "jshint .",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
+    "@eslint/js": "^9.32.0",
+    "eslint": "^9.32.0",
+    "gh-pages": "^6.3.0",
+    "globals": "^16.3.0",
+    "jshint": "^2.13.6",
+    "prettier": "^3.6.2",
     "vite": "^5.2.0"
   }
 }
