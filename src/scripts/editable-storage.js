@@ -1,4 +1,4 @@
-;(function () {
+export function setupEditableStorage() {
   const STORAGE_KEY = "editableContent";
 
   function saveContentImmediately(el) {
@@ -27,4 +27,4 @@
         el.addEventListener("input", () => saveContentImmediately(el));
       });
   });
-})();
+}

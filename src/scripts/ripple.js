@@ -1,4 +1,4 @@
-const createRipple = (e) => {
+export function createRipple(e) {
   const button = e.currentTarget;
   const rect = button.getBoundingClientRect();
   const size = Math.max(rect.width, rect.height);
@@ -15,4 +15,4 @@ const createRipple = (e) => {
   ripple.addEventListener("animationend", () => {
     ripple.remove();
   });
-};
+}
