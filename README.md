@@ -48,6 +48,27 @@
 
 🔗 [https://kobilyanskys.github.io/front-end-entrance-exam/](https://kobilyanskys.github.io/front-end-entrance-exam/)
 
+## Структура проекта
+
+project-root/
+├── public/
+│ ├── cv-pdf/ # PDF-файл резюме для скачивания
+│ │ └── CV.pdf
+│ └── img/ # Статичные изображения (аватар, иконки)
+├── src/
+│ ├── assets/ # Стили
+│ │ └── style.css
+│ ├── scripts/ # Все JavaScript-скрипты
+│ │ ├── downloadCV.js # Скачивает CV
+│ │ ├── editable-animate.js # Добавляет анимацию ввода
+│ │ ├── editable-storage.js # Сохраняет измененные текстовые поля
+│ │ └── ripple.js
+│ └── main.js # Точка входа (импортирует CSS и скрипты)
+├── index.html # Главная HTML-страница (в корне проекта)
+├── vite.config.js # Конфигурация сборщика Vite
+├── package.json
+└── README.md # Описание проекта
+
 ## 🛠️ Используемые технологии
 
 * HTML5
