@@ -3,7 +3,7 @@ document
   .addEventListener("click", function () {
     setTimeout(function () {
       const link = document.createElement("a");
-      link.href = "/cv-pdf/CV.pdf";
+      link.href = "cv-pdf/CV.pdf";
       link.download = "CV.pdf";
       document.body.appendChild(link);
       link.click();
