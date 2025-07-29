@@ -55,6 +55,8 @@
 
 🔗 [https://kobilyanskys.github.io/front-end-entrance-exam/](https://kobilyanskys.github.io/front-end-entrance-exam/)
 
+> опубликована сборка Vite
+
 ## Структура проекта
 
 ```
