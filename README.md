@@ -72,8 +72,8 @@ project-root/
 │   │   ├── downloadCV.js       # Скачивает CV
 │   │   ├── editable-animate.js # Добавляет анимацию ввода
 │   │   ├── editable-storage.js # Сохраняет измененные текстовые поля
-│   │   └── ripple.js
-│   └── main.js        # Точка входа (импортирует CSS и скрипты)
+│   │   └── ripple.js           # Ripple Effect
+│   └── main.js        # Объединяет все скрипты и подключается к index.html
 ├── index.html         # Главная HTML-страница (в корне проекта)
 ├── vite.config.js     # Конфигурация сборщика Vite
 ├── package.json
